@@ -1,0 +1,12 @@
+body {
+  background-color: #2b3342;
+  color: white;
+}
+
+img {
+  width: 50%;
+  max-width: 300px;
+  height: auto;
+  margin: 10 auto;
+  display: block;
+}
