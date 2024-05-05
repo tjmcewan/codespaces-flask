@@ -2,7 +2,10 @@
 wrap the cli app with a gui to keep VCAA happy :/
 """
 
+import os
 from flask import Flask, render_template, request, send_from_directory
+
+os.sys.path.append("..")
 import cli.main as CLI
 
 app = Flask(__name__)
@@ -36,4 +39,4 @@ def items_test():
 @app.route("/output/<path:path>")
 def output(path):
     """serve static files from output dir"""
-    return send_from_directory("output", path)
+    return send_from_directory("../output", path)

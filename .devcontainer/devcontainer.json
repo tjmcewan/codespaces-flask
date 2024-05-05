@@ -4,10 +4,10 @@
     "cpus": 4
   },
   "waitFor": "onCreateCommand",
-  "updateContentCommand": "cd server && pip install -r requirements.txt",
+  "updateContentCommand": "cd /workspaces/codespaces-flask/server && pip install -r requirements.txt",
   "postCreateCommand": "",
   "postAttachCommand": {
-    "server": "cd server && flask --debug run"
+    "server": "cd /workspaces/codespaces-flask/server && flask --debug run"
   },
   "portsAttributes": {
     "5000": {
@@ -18,7 +18,8 @@
   "customizations": {
     "codespaces": {
       "openFiles": [
-        "server/templates/index.html"
+        "server/templates/index.html",
+        "cli/main.py"
       ]
     },
     "vscode": {
